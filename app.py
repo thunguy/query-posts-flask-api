@@ -11,8 +11,7 @@ def get_status():
 
 @app.route('/api/posts', methods=['GET'])
 def get_posts():
-
-    # Define error messages
+    # Define error events
     tags_error = {'error': 'tags parameter is required'}
     sort_error = {'error': 'sortBy parameter is invalid'}
     direction_error = {'error': 'direction parameter is invalid'}
