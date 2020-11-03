@@ -8,24 +8,20 @@ $ pip3 install virtualenv
 $ virtualenv env
 $ source env/bin/activate
 ```
+
 Install dependencies:
 ```
 (env) $ pip3 install -r requirements.txt
 ```
-Launch server to run Flask app:
+
+Launch Flask to run app.py:
 ```
-OPTION 1 (auto reload, preferred):
 (env) $ python3 -i app.py
-
--OR-
-
-OPTION 2 (manual reload):
-(env) export FLASK_APP=app.py
-(env) flask run -h 0.0.0.0
 ```
+
 Navigate in web browser or curl in terminal to query the API:
 ```
-1.) 'http://localhost:5000' + '/api/ping'
+1.) 'http://localhost:5000/api/ping'
 
 2.) 'http://localhost:5000' + '/api/posts?tags=' + '&sortBy=' + '&direction='
         tags = required; separate multiple tags with commas
@@ -33,4 +29,14 @@ Navigate in web browser or curl in terminal to query the API:
         direction = optional; choose one: [asc, desc], otherwise default direction in ascending order
 
         EXAMPLE: 'http://localhost:5000/api/posts?tags=health,science,tech&sortBy=popularity&direction=desc'
+```
+
+Run API tests from test.py:
+```
+# exit out of 'python3 -i app.py' mode:
+press `Ctrl + C`
+press `Ctrl + D`
+
+# run test.py file:
+(env) $ python3 -m unittest -v test
 ```
