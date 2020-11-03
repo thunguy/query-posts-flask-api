@@ -1,7 +1,5 @@
 ## Installation
 
-#### Requirements:
-
 To have this app running on your local computer, please follow the below steps:
 
 Inside the project directory, create and activate a virtual environment:
@@ -16,10 +14,14 @@ Install dependencies:
 ```
 Launch server to run Flask app:
 ```
-OPTION 1 (auto reload):   (env) $ python3 -i app.py
+OPTION 1 (auto reload, preferred):
+(env) $ python3 -i app.py
 
-OPTION 2 (manual reload): (env) export FLASK_APP=app.py
-                          (env) flask run -h 0.0.0.0
+-OR-
+
+OPTION 2 (manual reload):
+(env) export FLASK_APP=app.py
+(env) flask run -h 0.0.0.0
 ```
 Navigate in web browser or curl in terminal to query the API:
 ```
